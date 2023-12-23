@@ -1,0 +1,20 @@
+{
+  "configVersion": 2,
+  "packages": [
+    {
+      "name": "csv",
+      "rootUri": "file:///C:/Users/SURFACE/AppData/Local/Pub/Cache/hosted/pub.dev/csv-5.1.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "bankai",
+      "rootUri": "../",
+      "packageUri": "lib/",
+      "languageVersion": "3.2"
+    }
+  ],
+  "generated": "2023-12-23T05:03:10.553352Z",
+  "generator": "pub",
+  "generatorVersion": "3.2.3"
+}
