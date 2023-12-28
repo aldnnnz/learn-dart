@@ -29,8 +29,13 @@ void main(){
         transfer(akun); // fungsi ini nantinya mengurangi saldo peengirim dan menambah saldo penerima
       default: 'tidak valid';
     }
-    String bankCsv = const ListToCsvConverter().convert(akun);
-    akunBank.writeAsStringSync(bankCsv);
+    try {
+      String bankCsv = const ListToCsvConverter().convert(akun);
+      akunBank.writeAsStringSync(bankCsv);
+    } catch (err) {
+      print(err);
+    }
+    
     stdout.write('\nkembali ke menu? (Y/N) : ');
     String? menu = stdin.readLineSync();
     if (menu == 'n') { // jika inputan dari menu adalah 'n' maka perulangan berhenti
@@ -81,11 +86,14 @@ void tarikSaldo(akun){
   stdout.write('masukkan nominalnya : ');
   double jml = double.parse(stdin.readLineSync()!);
   for (var kurang in akun ){
-    if (kurang[0] == id) {
+    if (jml <= kurang[2] && kurang[0] == id) {
       kurang[2] -= jml;
       print('tarik tunai berhasil no $id dengan jumlah Rp.$jml'
-      '\njumlah tabungan anda sekarang adalah Rp.${kurang[2]}');}
+      '\njumlah tabungan anda sekarang adalah Rp.${kurang[2]}');
+      return;
+    }
   }
+  print('mohon maaf jumlah nominal melebihi saldo🙏');
 }
 void cekSaldo(akun){
   stdout.write('masukkan no ID : ');
@@ -93,7 +101,8 @@ void cekSaldo(akun){
   for (var cek in akun) {
     if (cek[0] == id) {
       print('Saldo untuk akun $id adalah Rp.${cek[2]}');
-      return;}
+      return;
+    }
   }
   print('Akun tidak ditemukan.');
 }
