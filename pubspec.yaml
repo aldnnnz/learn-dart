@@ -1,6 +1,6 @@
 name: bankai
 description: A simple project 
 environment:
-  sdk: '^3.2.0'
+  sdk: '^3.1.0'
 dependencies:
   csv: ^5.1.1

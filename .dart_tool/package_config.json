@@ -3,7 +3,7 @@
   "packages": [
     {
       "name": "csv",
-      "rootUri": "file:///C:/Users/SURFACE/AppData/Local/Pub/Cache/hosted/pub.dev/csv-5.1.1",
+      "rootUri": "file:///C:/Users/Maell/AppData/Local/Pub/Cache/hosted/pub.dev/csv-5.1.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -11,10 +11,10 @@
       "name": "bankai",
       "rootUri": "../",
       "packageUri": "lib/",
-      "languageVersion": "3.2"
+      "languageVersion": "3.1"
     }
   ],
-  "generated": "2023-12-23T05:03:10.553352Z",
+  "generated": "2023-12-28T06:01:13.871931Z",
   "generator": "pub",
-  "generatorVersion": "3.2.3"
+  "generatorVersion": "3.1.2"
 }
